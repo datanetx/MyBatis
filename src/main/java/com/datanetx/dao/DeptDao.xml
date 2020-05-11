@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.datanetx.dao.DeptDao">
+
+    <select id="selectByDeptno" parameterType="java.lang.Integer" resultType="Dept">
+        select * from dept where deptno=#{deptno}
+    </select>
+
+    <select id="selectAll" resultType="Dept">
+        select * from dept;
+    </select>
+
+    <insert id="insert">
+        insert into dept(deptno,dname,loc) values (#{deptno},#{dname},#{loc})
+    </insert>
+
+    <update id="update">
+        update dept set dname=#{dname},loc=#{loc} where deptno=#{deptno}
+    </update>
+
+    <delete id="daleteByDeptno" parameterType="java.lang.Integer">
+        delete from dept where deptno=#{deptno}
+    </delete>
+</mapper>
