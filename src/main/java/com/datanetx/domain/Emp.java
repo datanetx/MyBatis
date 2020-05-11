@@ -1,5 +1,6 @@
 package com.datanetx.domain;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Emp {
@@ -29,12 +30,13 @@ public class Emp {
 
     @Override
     public String toString() {
+        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日");
         return "Emp{" +
                 "empno=" + empno +
                 ", ename='" + ename + '\'' +
                 ", job='" + job + '\'' +
                 ", mgr=" + mgr +
-                ", hiredate=" + hiredate +
+                ", hiredate=" + (hiredate==null?null:format.format(hiredate.getTime())) +
                 ", sal=" + sal +
                 ", comm=" + comm +
                 ", deptno=" + deptno +

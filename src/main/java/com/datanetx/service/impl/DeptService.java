@@ -16,9 +16,7 @@ public class DeptService implements com.datanetx.service.DeptService {
     }
 
     @Override
-    public List<Dept> selectAll() {
-        return deptDao.selectAll();
-    }
+    public List<Dept> selectAll() { return deptDao.selectAll(); }
 
     @Override
     public void insert(Dept dept) {
