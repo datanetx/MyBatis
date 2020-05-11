@@ -6,7 +6,7 @@ import com.datanetx.utils.SqlSessionUtils;
 
 import java.util.List;
 
-public class DeptService implements com.datanetx.service.DeptService {
+public class DeptServiceImpl implements com.datanetx.service.DeptService {
 
     private DeptDao deptDao= SqlSessionUtils.getSession().getMapper(DeptDao.class);
 

@@ -14,8 +14,7 @@ public class Emp {
     private Double comm;
     private Integer deptno;
 
-    public Emp() {
-    }
+    public Emp() {}
 
     public Emp(Integer empno, String ename, String job, Integer mgr, Date hiredate, Double sal, Double comm, Integer deptno) {
         this.empno = empno;
@@ -30,13 +29,13 @@ public class Emp {
 
     @Override
     public String toString() {
-        SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日");
+        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy年MM月dd日");
         return "Emp{" +
                 "empno=" + empno +
                 ", ename='" + ename + '\'' +
                 ", job='" + job + '\'' +
                 ", mgr=" + mgr +
-                ", hiredate=" + (hiredate==null?null:format.format(hiredate.getTime())) +
+                ", hiredate=" + (hiredate==null?null:dateFormat.format(hiredate.getTime())) +
                 ", sal=" + sal +
                 ", comm=" + comm +
                 ", deptno=" + deptno +

@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.datanetx.dao.EmpDao">
 
-    <select id="selectByEmpno" parameterType="java.lang.Integer" resultType="Emp">
+    <select id="selectByEmpno" resultType="Emp">
         select * from emp where empno=#{empno}
     </select>
 
@@ -19,7 +19,7 @@
         update emp set ename=#{ename},job=#{job},mgr=#{mgr},hiredate=#{hiredate},sal=#{sal},comm=#{comm},deptno=#{deptno} where empno=#{empno}
     </update>
 
-    <delete id="deleteByEmpno" parameterType="java.lang.Integer">
+    <delete id="deleteByEmpno">
         delete from emp where empno=#{empno}
     </delete>
 

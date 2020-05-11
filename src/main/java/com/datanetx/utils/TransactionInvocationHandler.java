@@ -6,10 +6,10 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class TransactionInvocationHandle implements InvocationHandler {
+public class TransactionInvocationHandler implements InvocationHandler {
 
     Object target;
-    public TransactionInvocationHandle(Object target){
+    public TransactionInvocationHandler(Object target){
         this.target=target;
     }
 
@@ -29,7 +29,7 @@ public class TransactionInvocationHandle implements InvocationHandler {
         return obj;
     }
 
-    public Object getProxy(Object target){
+    public Object getProxy(){
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),this);
     }
 }

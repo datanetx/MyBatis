@@ -3,11 +3,10 @@ package com.datanetx.service.impl;
 import com.datanetx.dao.EmpDao;
 import com.datanetx.domain.Emp;
 import com.datanetx.utils.SqlSessionUtils;
-import com.datanetx.utils.TransactionInvocationHandle;
 
 import java.util.List;
 
-public class EmpService implements com.datanetx.service.EmpService {
+public class EmpServiceImpl implements com.datanetx.service.EmpService {
 
     private EmpDao empDao= SqlSessionUtils.getSession().getMapper(EmpDao.class);
 

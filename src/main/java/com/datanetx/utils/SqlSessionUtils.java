@@ -13,7 +13,7 @@ import java.io.InputStream;
 public class SqlSessionUtils {
 
     //防止工具类被new
-    SqlSessionUtils(){}
+    private SqlSessionUtils(){}
 
     /**
      * 根据mybatis-config.xml取得一个SqlSessionFactory对象
@@ -52,7 +52,7 @@ public class SqlSessionUtils {
     public static void closeSession(SqlSession session){
         if(session!=null){
             session.close();
+            t.remove();
         }
-        t.remove();
     }
 }

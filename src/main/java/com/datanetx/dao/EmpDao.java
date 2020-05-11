@@ -1,6 +1,5 @@
 package com.datanetx.dao;
 
-import com.datanetx.domain.Dept;
 import com.datanetx.domain.Emp;
 
 import java.util.List;
