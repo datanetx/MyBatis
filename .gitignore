@@ -1,0 +1,13 @@
+
+!/src/main/resources/db.properties
+
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.gitignore
+src/test/resources/
